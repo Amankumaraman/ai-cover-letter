@@ -1,6 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
-
+from dotenv import load_dotenv
 import os
 import pdfplumber
 import docx
@@ -15,7 +15,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 resume_text_store = ""
