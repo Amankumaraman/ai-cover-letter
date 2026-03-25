@@ -62,7 +62,13 @@ function App() {
 
         <p className="text-center text-gray-500 mt-2 mb-6">
 
-          Create personalized cover letters in seconds
+          Generate personalized, ATS-friendly cover letters in seconds.
+
+        </p>
+
+        <p className="text-center text-sm text-gray-400 -mt-4 mb-6">
+
+          No signup required • Instant generation • Free tool
 
         </p>
 
