@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_BASE_URL = "https://ai-cover-letter-5meq.onrender.com";
+
 function App() {
 
   const [jobDescription, setJobDescription] = useState("");
@@ -14,7 +16,7 @@ function App() {
     formData.append("file", file);
 
     await axios.post(
-      "http://localhost:8000/upload-resume",
+      `${API_BASE_URL}/upload-resume`,
       formData
     );
 
@@ -31,7 +33,7 @@ function App() {
     formData.append("job_description", jobDescription);
 
     const res = await axios.post(
-      "http://localhost:8000/generate-cover-letter",
+      `${API_BASE_URL}/generate-cover-letter`,
       formData
     );
 
